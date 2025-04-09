@@ -6,8 +6,20 @@ import json
 import threading
 import time
 
-# URL de la API PHP (sin token)
-API_URL = "https://menaylex.com/Tools/api.php"  # Cambia por tu URL real si es necesario
+# URL de la API
+API_URL = "https://menaylex.com/Tools/api.php"  # Cambiar por modelo api[num].php
+# 0. Gemini (Default)
+# 1. GPT-4o (de paga)
+# 2. PaLM 2 (mantenimiento)
+# 3. Claude (de paga)
+# 4. LLaMA (mantenimiento)
+# 5. Bard (mantenimiento)
+# 6. DALL·E 3 (de paga)
+# 7. Stable Diffusion (de paga)
+# 8. Gato (no disp)
+# 9. Flamingo (mantenimiento)
+# 10. Turing-NLG (mantenimiento)
+# 11. WuDao (no disp)
 
 # Función para escribir respuesta de la IA letra por letra
 def escribir_respuesta(texto):
