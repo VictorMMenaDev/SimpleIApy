@@ -46,9 +46,9 @@ Este repositorio contiene un mini script en Python con una interfaz gráfica sim
 1.  **Clona este repositorio (opcional):** Si deseas tener una copia local del script y posiblemente contribuir, puedes clonar el repositorio:
     ```bash
     git clone https://github.com/VictorMMenaDev/SimpleIApy.git
-    cd [nombre del repositorio]
+    cd SimpleIApy
     ```
-2.  **Descarga el script:** Alternativamente, puedes simplemente descargar el archivo Python (por ejemplo, `chat_ia.py`) directamente.
+2.  **Descarga el script:** Alternativamente, puedes simplemente descargar el archivo Python (por ejemplo, `ChatM.py`) directamente.
 
 ## Uso
 
