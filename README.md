@@ -1,8 +1,11 @@
-# Mini Script de Python para [Nombre de tu API]
+# Chat con IA - Mini Script de Python
 
 [![Python](https://img.shields.io/badge/Python-3.x-blue.svg)](https://www.python.org/)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-Este repositorio contiene un mini script en Python diseñado para interactuar de manera sencilla con la API de [Nombre de tu API]. Proporciona un ejemplo básico para realizar solicitudes y manejar las respuestas.
+
+**Visita Menaylex.com para más herramientas y recursos.**
+
+Este repositorio contiene un mini script en Python con una interfaz gráfica simple (Tkinter) para interactuar con la API de chat de Mena. Permite enviar mensajes de texto y recibir respuestas generadas por un modelo de IA (configurado en el backend de la API).
 
 ## Tabla de Contenidos
 
@@ -12,7 +15,7 @@ Este repositorio contiene un mini script en Python diseñado para interactuar de
 - [Uso](#uso)
     - [Configuración](#configuración)
     - [Ejecución](#ejecución)
-    - [Ejemplos de Uso](#ejemplos-de-uso)
+    - [Interactuando con la IA](#interactuando-con-la-ia)
 - [Manejo de Errores](#manejo-de-errores)
 - [Contribución](#contribución)
 - [Licencia](#licencia)
@@ -21,20 +24,22 @@ Este repositorio contiene un mini script en Python diseñado para interactuar de
 
 ## Características
 
-* **Sencillez:** Un script conciso y fácil de entender para principiantes y usuarios que buscan una interacción rápida con la API.
-* **Flexibilidad:** Permite realizar solicitudes `GET` (y fácilmente extensible a otros métodos como `POST`, `PUT`, `DELETE`).
-* **Formato JSON:** Asume y maneja las respuestas de la API en formato JSON (configurable si es diferente).
-* **Manejo básico de errores:** Incluye manejo de excepciones para problemas de conexión y códigos de estado HTTP.
-* **Autenticación:** Soporte básico para autenticación mediante token Bearer en los headers (adaptable a otros métodos).
+* **Interfaz Gráfica Simple:** Utiliza Tkinter para una interacción intuitiva mediante una ventana de chat.
+* **Envío de Mensajes:** Permite al usuario ingresar y enviar mensajes de texto a la API.
+* **Recepción de Respuestas de la IA:** Muestra las respuestas generadas por la IA en la ventana de chat con un efecto de escritura gradual.
+* **Indicador de Carga:** Incorpora una barra de progreso para indicar que se está esperando la respuesta de la API.
+* **Hilos para Operaciones Asíncronas:** Utiliza hilos para evitar bloquear la interfaz de usuario mientras se espera la respuesta de la API.
+* **Fácil de Usar:** Diseño simple y directo para una interacción rápida con la IA.
 
 ## Requisitos
 
 * **Python 3.x:** El script está desarrollado y probado con Python 3.
-* **Biblioteca `requests`:** Necesaria para realizar solicitudes HTTP. Puedes instalarla con:
+* **Biblioteca `tkinter`:** Utilizada para la interfaz gráfica. Generalmente viene instalada con Python.
+* **Biblioteca `requests`:** Necesaria para realizar solicitudes HTTP a la API. Puedes instalarla con:
     ```bash
     pip install requests
     ```
-* **Acceso a la API de [Nombre de tu API]:** Necesitarás una cuenta o credenciales válidas para interactuar con la API.
+* **Acceso a la API:** Necesitarás acceso a la API en la URL `https://menaylex.com/Tools/api.php`.
 
 ## Instalación
 
@@ -43,31 +48,13 @@ Este repositorio contiene un mini script en Python diseñado para interactuar de
     git clone [https://github.com/sindresorhus/del](https://github.com/sindresorhus/del)
     cd [nombre del repositorio]
     ```
-2.  **Descarga el script:** Alternativamente, puedes simplemente descargar el archivo `api_client.py` (o el nombre que le hayas dado) directamente.
+2.  **Descarga el script:** Alternativamente, puedes simplemente descargar el archivo Python (por ejemplo, `chat_ia.py`) directamente.
 
 ## Uso
 
 ### Configuración
 
-Antes de ejecutar el script, deberás configurar las siguientes variables dentro del archivo:
-
-* `API_BASE_URL`: Reemplaza `"TU_API_BASE_URL_AQUI"` con la URL base de la API de [Nombre de tu API]. Ejemplo: `https://api.ejemplo.com/v1`.
-* `ENDPOINT`: Define el endpoint específico al que deseas acceder. Ejemplo: `/usuarios`.
-* `API_TOKEN` (opcional): Si tu API requiere autenticación mediante token Bearer, reemplaza `"TU_TOKEN_DE_AUTENTICACION_AQUI"` con tu token. Déjalo como `None` o una cadena vacía si no se requiere autenticación o si utilizas otro método.
-* `HEADERS` (opcional): Si necesitas encabezados personalizados (además de la autorización), puedes modificarlos en esta variable.
-* `DATA` (opcional): Para solicitudes `POST`, `PUT`, etc., modifica este diccionario con los datos que deseas enviar.
-
-**Ejemplo de configuración:**
+Antes de ejecutar el script, asegúrate de tener la biblioteca `requests` instalada. La URL de la API (`API_URL`) ya está configurada dentro del script:
 
 ```python
-import requests
-import json
-
-API_BASE_URL = "[https://mi-api.com/v2](https://mi-api.com/v2)"
-ENDPOINT = "/productos"
-API_TOKEN = "abcdef1234567890"
-HEADERS = {'X-Custom-Header': 'mi-valor'}
-DATA = {
-    "nombre": "Nuevo Producto",
-    "precio": 25.99
-}
+API_URL = "[https://menaylex.com/Tools/api.php](https://menaylex.com/Tools/api.php)"
