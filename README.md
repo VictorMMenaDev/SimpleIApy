@@ -45,7 +45,7 @@ Este repositorio contiene un mini script en Python con una interfaz gráfica sim
 
 1.  **Clona este repositorio (opcional):** Si deseas tener una copia local del script y posiblemente contribuir, puedes clonar el repositorio:
     ```bash
-    git clone [https://github.com/sindresorhus/del](https://github.com/sindresorhus/del)
+    git clone https://github.com/VictorMMenaDev/SimpleIApy.git
     cd [nombre del repositorio]
     ```
 2.  **Descarga el script:** Alternativamente, puedes simplemente descargar el archivo Python (por ejemplo, `chat_ia.py`) directamente.
@@ -57,4 +57,4 @@ Este repositorio contiene un mini script en Python con una interfaz gráfica sim
 Antes de ejecutar el script, asegúrate de tener la biblioteca `requests` instalada. La URL de la API (`API_URL`) ya está configurada dentro del script:
 
 ```python
-API_URL = "[https://menaylex.com/Tools/api.php](https://menaylex.com/Tools/api.php)"
+API_URL = "https://menaylex.com/Tools/api.php"
